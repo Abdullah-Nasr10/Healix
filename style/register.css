@@ -1,0 +1,225 @@
+/* :root {
+    --main-color: #384adc;
+} */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    /* align-content: center; */
+}
+
+.registration {
+    width: 60%;
+    /* height: 450px; */
+    border: 5px solid var(--main-color-2);
+    background-color: var(--bg-white-1);
+    box-shadow: 0px 0px 10px #BBBBC1;
+    border-radius: 23px;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    margin: 200px 0px;
+}
+
+.registration .box {
+    width: 50%;
+    padding: 20px;
+    /* border: 1px solid var(--main-color); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.registration .block {
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: var(--main-color-2);
+    top: 0;
+    left: calc(50% - 100px / 2);
+    z-index: 100;
+}
+
+.registration .registerImage {
+    position: absolute;
+    background-image: url('../imgs/registerImg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 7px var(--main-color-2);
+    border-radius: 20px;
+    z-index: 50;
+    transition: 0.5s all ease-in-out;
+}
+
+
+.registration .inputStyle {
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    outline: 1px solid #BBBBC1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    /* overflow: hidden; */
+
+}
+
+.registration .inputStyle input {
+    width: 100%;
+    background-color: transparent;
+
+
+}
+
+
+.registration .inputStyle input:autofill {
+    box-shadow: 0px 0px 300px #f4f4f4 inset;
+}
+
+.registration .inputStyle.focused {
+    outline: 2px solid #1292ee;
+    transition: 0.05s all ease-in-out;
+
+}
+
+.registration .inputStyle .error-message {
+    position: absolute;
+    color: red;
+    bottom: -1.7rem;
+    left: 5px;
+}
+
+
+
+.registration .inputStyle .togglePassword {
+    cursor: pointer;
+    font-size: 1.5rem;
+
+
+}
+
+.registration .inputStyle .togglePassword:hover {
+    color: var(--main-color);
+}
+
+.registration .loginGoogle {
+    width: 100%;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid #BBBBC1;
+    outline: 1px solid #BBBBC1;
+    border-radius: 10px;
+    color: var(--text-black-1);
+    font-size: 1.4rem;
+    transition: 0.1s all ease-in-out;
+}
+
+.registration .loginGoogle:hover {
+    outline: 2px solid #1292ee;
+    outline-offset: 1px;
+}
+
+.registration .or {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.registration .or h3 {
+    font-size: 1.4rem;
+}
+
+.registration .or span {
+    display: block;
+    background-color: #BBBBC1;
+    width: 35%;
+    height: 1px;
+}
+
+.registration .formLogin {
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.registration .formLogin .submitAccount {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--main-color-2);
+    color: var(--bg-white-1);
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    /* transition: 0.3s all linear; */
+}
+
+.registration .formLogin .submitAccount:hover {
+    cursor: pointer;
+    /* transform: scale(1.1); */
+    outline: 2px solid var(--main-color-2);
+    color: var(--main-color-2);
+    background-color: var(--bg-white-1);
+
+}
+
+.registration .haveAccount span {
+    color: gray;
+}
+
+.registration .haveAccount a {
+    color: var(--main-color);
+}
+
+
+/*  ======================regiser-start========================= */
+.registration .regiser h1 {
+    font-size: 2rem;
+}
+
+.registration .regiser .formLogin .fullName {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+.registration .regiser .formLogin .fullName .inputStyle {
+    width: 50%;
+
+
+    /* padding: 10px 20px; */
+}
+
+
+
+
+
+/*  ======================regiser-end========================= */
+
+
+
+
+/* =====================login-start========================= */
+/* .registration .login .formLogin .loginAccount {} */
+
+/* =====================login-end========================= */

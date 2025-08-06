@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healix</title>
+    <!-- ======style======= -->
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/cart.css">
+
+    <!-- ======font-awesome======= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <!-- ======favicon===== -->
+    <link rel="icon" href="./imgs/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <!-- ============================Loader-page-start============================  -->
+    <div class="page-loader">
+        <div class="loader"></div>
+        <div class="logo" style="font-size: 5rem">
+            <a href="#"><span>h</span>ealix</a>
+        </div>
+    </div>
+    <!-- ============================Loader-page-end============================  -->
+
+
+
+
+
+    <!-- ============================header-section-start============================== -->
+    <header class="header">
+        <div class="logo">
+            <a href="#"><span>h</span>ealix</a>
+        </div>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">features</a>
+            <a href="#about">about</a>
+            <a href="#products">products</a>
+            <a href="#reviews">review</a>
+            <a href="#contact">contact</a>
+
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-shopping-cart " id="cart-btn">
+                <span id="numbOfcat" class="center">0</span>
+            </div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <!-- ----------------shopping-cart---------------- -->
+        <div class="shopping-cart">
+            <h3>your cart</h3>
+
+            <div class="cart-item-wrapper">
+                <div class="cart-items center">
+                    <img src="./imgs/empty-cart.png" alt="" width="100px" />
+                    <h4>Your cart is empty</h4>
+                    <p>Add items to it now.</p>
+                </div>
+            </div>
+
+            <div class="total">Total : $0</div>
+            <div class="cart-btns center">
+                <a href="#" class="btn checkout-btn">check out</a>
+                <a href="#" class="btn clear-cart-btn">
+                    <i class="fas fa-trash"> </i> Clear Cart</a>
+            </div>
+
+            <!-- ----close-icon----- -->
+            <i class="fa-solid fa-xmark close" id="close-cart"></i>
+        </div>
+
+        <!-- ----------------login-form------------------- -->
+        <div class="login-form">
+            <div class="userInformation center">
+                <div class="img" id="profilePhoto">
+                    <i class="fa-solid fa-camera" id="camera"></i>
+                    <input type="file" id="fileInput" accept="image/*">
+                </div>
+                <h2 class="name"></h2>
+                <h2 class="email"></h2>
+                <!-- ------------------logout------------- -->
+                <div class="logOut btn profileBtns">
+                    <h4>log out</h4>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </div>
+                <!-- ------------------manage------------- -->
+                <div class="manage btn profileBtns">
+                    <i class="fa-solid fa-gear"></i>
+                    <h4>manage</h4>
+                </div>
+            </div>
+            <!-- --------------manageAccountContainer---------- -->
+            <div class="popupPage manageAccount center">
+                <div class="popaupPageContainer manageAccountContainer">
+                    <!-- ----------headerManage---------- -->
+                    <div class="headerManageAccount center">
+                        <div class="img" id="mangeProfilePhoto">
+                            <!-- <i class="fa-solid fa-camera" id="managecamera"></i>
+                            <input type="file" id="manageFileInput" accept="image/*"> -->
+                        </div>
+                        <div class="informationUser">
+                            <h2 class="name"></h2>
+                            <h2 class="email"></h2>
+                        </div>
+                    </div>
+                    <!-- ----------userDataManage---------- -->
+                    <div class="userData">
+                        <div class="firstName">
+                            <h6>first name: </h6>
+                            <span class="value"></span>
+                        </div>
+                        <div class="LastName">
+                            <h6>last name: </h6>
+                            <span class="value"></span>
+                        </div>
+                        <div class="Email">
+                            <h6>email: </h6>
+                            <span class="value"></span>
+                        </div>
+                        <div class="password">
+                            <h6>password: </h6>
+                            <span class="value">***********</span>
+                        </div>
+                    </div>
+                    <!-- ----------editeDataManage---------- -->
+                    <div class="editeData">
+                        <div class="edite">
+                            <h2>edite your personal date</h2>
+                            <i class="fa-solid fa-angle-right" id="showEdit"></i>
+                            <!-- <i class="fa-solid fa-angle-down"></i> -->
+                        </div>
+
+                        <form action="" class="editeInformationForm hide">
+
+                            <div class="editInputStyle">
+                                <input type="text" placeholder="New First Name" name="firstName">
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="editInputStyle">
+                                <input type="text" placeholder="New Last Name" name="lastName">
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="editInputStyle">
+                                <input class="passwordInput" type="password" placeholder="Your current password"
+                                    name="currentPassword">
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="editInputStyle">
+                                <input class="passwordInput" type="password" placeholder="New Password"
+                                    name="newPassword">
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="saveChange">
+                                <button class="btn">Save Change</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- -----------deleteData------------ -->
+                    <a href="#" class="btn" id="deletAccount">delete account</a>
+
+                </div>
+
+                <i class="fa-solid fa-xmark close" id="closemanageAccount"></i>
+            </div>
+
+
+            <!-- ----------------register-form------------------- -->
+            <div class="registration">
+                <a href="#" class="acounts googleRegister">
+                    <i class="fa-brands fa-google"></i>
+                    <span>continue with google </span>
+                </a>
+                <a href="#" class="acounts facebookRegister">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span>continue with facebook </span>
+                </a>
+
+                <div class="or">
+                    <div></div>
+                    <p>or</p>
+                    <div></div>
+                </div>
+
+                <a href="./registration.html" class="btn">login now</a>
+            </div>
+
+            <!-- ----close-icon----- -->
+            <i class="fa-solid fa-xmark close" id="close-login"></i>
+
+        </div>
+
+
+    </header>
+    <!-- ============================header-section-end============================== -->
+
+
+
+
+
+
+    <!-- ============================home-section-start============================ -->
+    <section class="home container center" id="home">
+
+        <div class="hero row">
+            <div class="content">
+                <h3>Trusted Medical Solutions</h3>
+                <h2>Shop quality medical tools and equipment for clinics home</h2>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+        </div>     
+    </section>
+    <!-- ============================home-section-end============================== -->
+
+
+
+
+
+
+    <!-- ============================features-section-start============================ -->
+    <section class="features container" id="features">
+        <div class="heading">
+            <h3>our <span>features</span></h3>
+        </div>
+
+        <div class="row">
+            <div class="feature">
+                <i class="fas fa-shipping-fast icon"></i>
+                <div class="content">
+                    <h3>Free Shipping</h3>
+                    <p>Over Order $600</p>
+                </div>
+            </div>
+            <!-- ------------------------- -->
+            <div class="feature">
+                <i class="fa-solid fa-credit-card icon"></i>
+                <div class="content">
+                    <h3>Quick Payment</h3>
+                    <p>100% Secure</p>
+                </div>
+            </div>
+            <!-- ----------------------------- -->
+            <div class="feature">
+                <i class="fa-solid fa-gift icon"></i>
+                <div class="content">
+                    <h3>Big Cashback</h3>
+                    <p>Over 50% Cashback</p>
+                </div>
+            </div>
+            <!-- -------------------------------- -->
+            <div class="feature">
+                <i class="fa-solid fa-user-group icon"></i>
+                <div class="content">
+                    <h3>24/7 Support</h3>
+                    <p>Ready For You</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============================features-section-end============================ -->
+
+
+
+
+
+
+
+    <!-- ============================about-us-section-start============================ -->
+    <section class="about container" id="about">
+        <div class="heading">
+            <h3>about <span>us</span></h3>
+        </div>
+        <div class="row">
+            <div class="aboutImages">
+                <div class="section1">
+                    <div class="imag1"></div>
+                    <div class="imag2"></div>
+                </div>
+                <div class="section2">
+                    <div class="imag3"></div>
+                    <div class="imag4"></div>
+                </div>
+
+            </div>
+            <!-- ----------------------------- -->
+            <div class="aboutContent">
+                <h2>Delivering <span>Trusted Medical Supplies</span></h2>
+                <p>We provide high-quality medical tools, equipment, and consumables trusted by healthcare
+                    professionals. Our mission is to ensure reliability and excellence in every product we offer.
+                </p>
+                <div class="statistic">
+                    <div>
+                        <h3>500+</h3>
+                        <h5>Medical Products</h5>
+                    </div>
+                    <div class="line">
+                        <h3>1000+</h3>
+                        <h5>Happy Customers</h5>
+                    </div>
+                    <div>
+                        <h3>99%</h3>
+                        <h5>Customer Satisfaction</h5>
+                    </div>
+
+                </div>
+                <a href="#" class="btn" id="toAboutPage">read more</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="popupPage aboutPage center">
+        <div class="popaupPageContainer aboutContainer">
+            <!-- ------------------------------------------- -->
+            <section class="container aboutHome">
+                <div class="row">
+                    <div class="contentAbout">
+                        <h1>About us</h1>
+                        <p>At our store, we’re committed to providing high-quality medical supplies that people can
+                            trust. We believe that healthcare starts with the right tools—reliable, safe, and
+                            accessible. Our products are carefully selected to offer both quality and peace of mind.</p>
+                    </div>
+                    <div class="imgAbout"></div>
+                </div>
+            </section>
+            <!-- ------------------------------------------- -->
+            <section class="container ourMission">
+                <div class="row">
+                    <div class="imgAbout"></div>
+                    <div class="contentAbout">
+                        <h2>Our Mission: Supporting Better Health for Everyone</h2>
+                        <p>We’re not just about selling products—we’re about improving lives. Our mission is to make
+                            essential medical supplies available to everyone, from healthcare professionals to
+                            individuals at home. We aim to empower better care through better access.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- ------------------------------------------- -->
+            <section class="container ourStory">
+                <div class="row">
+                    <div class="contentAbout">
+                        <h2>Our Story</h2>
+                        <p>Our journey began in [insert year] when we noticed how difficult it was for many people to
+                            find trusted medical supplies quickly and easily. That’s when we decided to build an online
+                            platform focused on quality, reliability, and convenience.
+
+                            Since then, we’ve grown into a trusted destination for thousands of customers looking for
+                            certified medical products. Backed by a dedicated team and strong supplier partnerships, we
+                            continue to expand our offerings and simplify the healthcare shopping experience.
+                        </p>
+                    </div>
+                    <div class="imgAbout"></div>
+                </div>
+            </section>
+            <!-- ------------------------------------------- -->
+            <section class="container">
+                <div class="row statsRow">
+                    <h4>By the Numbers</h4>
+                    <div class="statsHighlights">
+                        <!-- ----------------- -->
+                        <div class="statsBox">
+                            <i class="fas fa-briefcase"></i>
+                            <h6>7+ Years of Industry Experience</h6>
+                        </div>
+                        <!-- ----------------- -->
+                        <div class="statsBox">
+                            <i class="fas fa-stethoscope"></i>
+                            <h6>1,000+ Certified Medical Products</h6>
+                        </div>
+                        <!-- ----------------- -->
+                        <div class="statsBox">
+                            <i class="fas fa-smile"></i>
+                            <h6>10,000+ Satisfied Customers</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </div>
+        <i class="fa-solid fa-xmark close" id="closeAboutPage"></i>
+    </div>
+
+    <!-- ============================about-us-section-end============================ -->
+
+
+
+
+
+
+
+
+
+    <!-- ============================products-section-start============================ -->
+    <section class="products container" id="products">
+        <div class="heading">
+            <h3>our <span>products</span></h3>
+        </div>
+        <!-------search start-->
+        <div class="searchdiv">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="search" class="searchtab" type="text" placeholder="Search Products" />
+            </div>
+        </div>
+        <!-------search end-->
+        <!----------------- filters&products--------------------->
+        <div class="shop-layout">
+            <!-- Filter Buttons -->
+            <div class="catfilter center">
+                <button class="btn filter-btn" data-category="all">All</button>
+                <button class="btn filter-btn" data-category="walking_aids">
+                    Walking Aids
+                </button>
+                <button class="btn filter-btn" data-category="blood_pressure_monitors">
+                    Blood Pressure Monitors
+                </button>
+                <button class="btn filter-btn" data-category="sugar_devices">
+                    Sugar Devices
+                </button>
+                <button class="btn filter-btn" data-category="health_care_products">
+                    Health Care Products
+                </button>
+            </div>
+
+            <!-- Sort by Price -->
+            <div class="pricesortdiv">
+                <select class="selectprice" name="price" id="priceSort">
+                    <option value="default" selected>Default sort</option>
+                    <option value="low-to-high">low-to-high</option>
+                    <option value="high-to-low">high-to-low</option>
+                </select>
+            </div>
+        </div>
+        <!----------------- filters&products end--------------------->
+
+        <!----------------- not-found start--------------------->
+        <div id="notFound" class="center">
+            <img src="./imgs/search.png" alt="no result found" width="150px" />
+            <h2>Not found!</h2>
+        </div>
+        <!----------------- not-found end--------------------->
+        <div class="row cardScontainer" id="prods"></div>
+        <div class="viewbtn">
+            <button class="btn" id="view_more">view more</button>
+        </div>
+    </section>
+
+    <!-- ============================products-section-end============================ -->
+
+
+
+
+    <!-- ============================intro-banner-section-start============================ -->
+    <section class="intro-banner container" id="intro-banner">
+        <div class="row">
+
+            <div class="startJourney">
+                <h2>Enhance Your Clinic with Trusted Medical Solutions</h2>
+                <p>We offer reliable medical equipment, diagnostic tools, and supplies tailored for clinics and
+                    healthcare providers. Let us support your mission to deliver excellent care.</p>
+                <a href="#" class="btn" id="toBannerPage">Explore Clinic Services →</a>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------- -->
+    <div class="popupPage bannerPage center">
+        <div class="popaupPageContainer bannerContainer">
+            <h1>our services for clinics</h1>
+            <h3>welcom to healix</h3>
+            <p class="bannerTitle">we are dedicated to providing high-quality medical supplies tailored to met
+                the needs
+                of healthcare
+                protessionals and their patients.</p>
+            <main class="mainSectionBanner">
+                <div class="services">
+                    <h4>why partner with us</h4>
+                    <!-- -----------serviceBox------------ -->
+                    <div class="serviceBox">
+                        <div class="icon center">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <div class="description">
+                            <h5>reliable equipment</h5>
+                            <p>we offer trusted medical devices and intruments.</p>
+                        </div>
+                    </div>
+                    <div class="serviceBox">
+                        <div class="icon center">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div class="description">
+                            <h5>custom orders</h5>
+                            <p>we can supply specific prodocts to fit your clinic's needs</p>
+                        </div>
+                    </div>
+                    <div class="serviceBox">
+                        <div class="icon center">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+                        <div class="description">
+                            <h5>competitive pricing</h5>
+                            <p>get the value on high-quality medical products.</p>
+                        </div>
+                    </div>
+                    <div class="serviceBox">
+                        <div class="icon center">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div class="description">
+                            <h5>ongoing support</h5>
+                            <p>we're here to assist with any questions or concerns</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----------serviceImg------------ -->
+                <div class="serviceImg"></div>
+            </main>
+            <section class="clinicSupportSection">
+                <p>"Our comprehensive solutions equip clinics with the best tools and supplies needed to deliver
+                    outstanding patient care and achieve operational excellence."</p>
+                <h2>Helping Clinics Succeed</h2>
+                <div class="ourService">
+                    <div class="flexOurService">
+                        <div class="imgOurService"></div>
+                        <div class="conentOurService">
+                            <h3>Our Services</h3>
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-stethoscope"></i>
+                                    <span>Diagnostic Equipment</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-clipboard-check"></i>
+                                    <span>Sterilization & Safety Tools</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bed-pulse"></i>
+                                    <span>Exam Room Essentials</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-flask"></i>
+                                    <span>Professional Products</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-syringe"></i>
+                                    <span>Inventory Replenishment</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+        <i class="fa-solid fa-xmark close" id="closeBannerPage"></i>
+    </div>
+    <!-- ============================intro-banner-section-end============================ -->
+
+
+
+
+
+
+    <!-- ============================reviews-section-start============================ -->
+    <section class="reviews container" id="reviews">
+        <div class="heading">
+            <h3>our <span>reviews</span></h3>
+        </div>
+
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">
+            What <span style="color: var(--main-color);">Our</span> Clients Say
+        </h2>
+
+        <div class="row review-cards">
+            <div class="review-card"> <!--  card 1 -->
+                <div class="review-header">
+                    <div class="center">
+
+                        <div class="imgContainer">
+                            <img src="./imgs/review_img1.jpg" alt="client" /> <!--  imge  -->
+                        </div>
+                        <div class="title"> <!--  name , job , stars ,number of review  -->
+                            <h4>KELLY CHAPMAN</h4>
+                            <p>Architecture</p>
+                            <div class="stars">⭐⭐⭐⭐⭐ <span>5.0</span></div>
+                        </div>
+                    </div>
+                    <div class="quotes center">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                </div>
+                <div> <!--  comment  -->
+                    <p class="review-text">
+                        "I’ve been ordering from this website for months now and every time I’m impressed by the
+                        speed
+                        of delivery, the high quality of the medical products, the excellent customer support,
+                        the fair
+                        pricing, and the professional packaging that ensures everything arrives safely and on
+                        time."
+                    </p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="center">
+
+                        <div class="imgContainer">
+                            <img src="./imgs/review_img2.jpg" alt="client"" />
+                    </div>
+                    <div class=" title">
+                            <h4>Jenny Wilson</h4>
+                            <p>Interior Designer</p>
+                            <div class="stars">⭐⭐⭐⭐⭐ <span>5.0</span></div>
+                        </div>
+                    </div>
+                    <div class="quotes center">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                </div>
+                <p class="review-text">
+                    "This is by far the most reliable medical supply service I’ve used — they offer a wide
+                    variety of
+                    tools and equipment, respond quickly to inquiries, always deliver on time, provide helpful
+                    support
+                    throughout the process, and maintain excellent product quality."
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <!-- ============================reviews-section-end============================ -->
+
+
+
+
+
+    <!-- ============================contact-us-section-start============================ -->
+    <section class="contact container" id="contact">
+        <div class="heading">
+            <h3>contact <span>us</span></h3>
+        </div>
+
+        <div class="row contact-row">
+            <!-- الصورة -->
+            <div class="contact-image">
+                <img src="./imgs/contact_img.jpg" alt="contact" />
+            </div>
+
+            <!-- الفورم -->
+            <form class="contact-form">
+                <div class="input-group">
+                    <input type="text" placeholder="First Name" pattern="[A-Za-z]{2,}"
+                        title="First name must contain at least 2 letters only." required />
+                    <input type="text" placeholder="Last Name" pattern="[A-Za-z]{2,}"
+                        title="Last name must contain at least 2 letters only." required />
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Email" pattern="^[a-zA-Z][a-zA-Z0-9._-]*@(gmail|yahoo|msn)\.com$"
+                        title="Enter a valid email like example@mail.com" required />
+                    <input type="tel" placeholder="Phone" pattern="^(010|011|012|015)[0-9]{8}$"
+                        title="phone number starting with 010, 011, 012, or 015 and containing 11 digits." />
+                </div>
+                <textarea placeholder="Your Message" rows="5" pattern=".{10,}"
+                    title="Message must be at least 10 characters."></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- ============================contact-us-section-end============================ -->
+
+
+
+
+
+
+
+    <!-- ============================footer-section-start============================ -->
+    <section class="footer container" id="footer">
+        <div class="row footerSections">
+            <div class="footer-col">
+                <div class="logo">
+                    <a href="#"><span>h</span>ealix</a>
+                </div>
+                <p class="footer-description">Your trusted source for high-quality medical supplies and equipment,
+                    dedicated to supporting
+                    clinics and home care needs.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+
+
+            <div class="footer-col">
+                <h3>Main</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">features</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#products">products</a></li>
+                    <li><a href="#reviews">review</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col">
+                <h3> Product Categories</h3>
+                <ul>
+                    <li><a href="#">Diagnostic Tools</a></li>
+                    <li><a href="#">Medical Equipment</a></li>
+                    <li><a href="#">Home Care Supplies</a></li>
+                    <li><a href="#">Surgical Instruments</a></li>
+                    <li><a href="#">Protective Gear</a></li>
+                    <li><a href="#">Mobility Aids</a></li>
+
+                </ul>
+            </div>
+
+
+            <div class="footer-col">
+                <h3>Customer Support</h3>
+                <ul>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Support Center</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Return & Refund Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row teamMembers center">
+            <ul>
+                <li>created by</li>
+                <li><a href="#">Abdullah Nasr</a></li>
+                <li><a href="#">Rania Ahmed</a></li>
+                <li><a href="#">Ghada salah</a></li>
+                <li><a href="#">haba gamal</a></li>
+                <li><a href="#">rehab abdelmonem</a></li>
+                <li><a href="#">Aalaa muhammed</a></li>
+                <li>| all rights reserved</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- ============================footer-section-end============================ -->
+
+
+
+
+
+
+
+
+
+    <!-- ============================Popup checkout-Page-start============================ -->
+    <div class="popupPage checkoutPage center">
+        <div class="popaupPageContainer checkoutContainer">
+            <div class="checkout-wrapper">
+                <!-- Left: Shipping Info -->
+                <div class="checkout-left">
+                    <div class="logo">
+                        <a href="#"><span>h</span>ealix</a>
+                    </div>
+                    <h2>Checkout</h2>
+                    <div class="shipping-tabs">
+                        <button class="delivery-tab tab">Delivery</button>
+                        <button class="pickup-tab tab">Pick up</button>
+                    </div>
+                    <form class="shipping-form">
+                        <label>Full name *</label>
+                        <input type="text" placeholder="Mohamed Ahmed" required />
+
+                        <label>Email address *</label>
+                        <input type="email" placeholder="mohamed.ahmed@example.com" required />
+
+                        <label>Phone number *</label>
+                        <div class="phone-field">
+                            <input type="tel" placeholder="010 1234 5678" required />
+                        </div>
+
+                        <label>Government *</label>
+                        <select class="government-select" required name="government">
+                            <option disabled selected>Select Governorate</option>
+                            <option value="Cairo">Cairo</option>
+                            <option value="Giza">Giza</option>
+                            <option value="Alexandria">Alexandria</option>
+                            <option value="Dakahlia">Dakahlia</option>
+                            <option value="Sharqia">Sharqia</option>
+                            <option value="Qalyubia">Qalyubia</option>
+                            <option value="Aswan">Aswan</option>
+                        </select>
+                    </form>
+
+                    <!-- Pick-up details (hidden by default) -->
+                    <div class="pickup-details" style="display: none; margin-top: 1rem">
+                        <h4>Pick-up Information</h4>
+
+                        <p><strong>Pickup Hours:</strong> Daily from 10 AM to 6 PM</p>
+                        <p>
+                            <strong>Location:</strong> Healix Store, 15 El Tahrir St, Dokki,
+                            Giza, Egypt
+                        </p>
+
+                        <!-- Google Map Embed -->
+                        <div style="margin: 1rem 0">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.3058611673466!2d31.235711815114373!3d30.04441938188325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840cafd4fe5f1%3A0x6f9571d0d7c5f151!2z2YXZg9iq2KjYqSDYp9mE2YXYp9mC2LHYp9iq!5e0!3m2!1sar!2seg!4v1690563137563!5m2!1sar!2seg"
+                                width="100%" height="200" style="border: 0" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                        <p><strong>Contact us:</strong></p>
+                        <ul>
+                            <li>
+                                <i class="fas fa-phone" style="color: var(--black)"></i>
+                                tel: +20 100 555 6789
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope" style="color: var(--black)"></i>
+                                mail:<a href="mailto:support@healix.com">support@healix.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Cart Summary -->
+                <div class="checkout-right">
+                    <h3>Review your cart</h3>
+
+                    <!-- Products from JavaScript -->
+                    <div id="checkout-items" class="checkout-items"></div>
+
+                    <!-- discount code -->
+                    <div class="discount-code">
+                        <div class="discount-code-btns center">
+                            <input type="text" id="discount-code" placeholder="Discount code" />
+                            <button class="apply-btn" onclick="applyDiscount()">
+                                Apply
+                                <i class="fas fa-times" id="remove-coupon"
+                                    style="display: none; cursor: pointer; margin-left: 8px"
+                                    onclick="removeCoupon()"></i>
+                            </button>
+                        </div>
+
+                        <p id="discount-message" class="discount-msg"></p>
+                    </div>
+
+                    <!-- cart-summary -->
+                    <div class="cart-summary">
+                        <div>Subtotal: <span id="checkout-subtotal">EGP 0.00</span></div>
+                        <div>Shipping: <span id="checkout-shipping">EGP 50.00</span></div>
+                        <div>Discount: <span id="checkout-discount">-EGP 00.00</span></div>
+                        <div class="total">
+                            Total: <strong id="checkout-total">EGP 0.00</strong>
+                        </div>
+                    </div>
+
+                    <button class="pay-btn">Pay Now</button>
+                    <p class="secure-msg">🔒 Secure Checkout – SSL Encrypted</p>
+                </div>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark close" id="closeCheckoutPage"></i>
+    </div>
+
+    <!-- ============================Popup checkout-Page-end============================ -->
+
+
+
+
+
+
+
+    <!-- ======================dark-mood-icon=================================== -->
+
+    <div class="day-night center">
+        <i class="fas"></i>
+    </div>
+
+    <!-- ==================script======================= -->
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/products.js"></script>
+    <script src="./scripts/cart.js"></script>
+
+</body>
+
+</html>

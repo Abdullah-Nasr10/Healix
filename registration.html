@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <!-- ======style======= -->
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/register.css">
+    <!-- ======font-awesome======= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <!-- ======favicon===== -->
+    <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
+</head>
+
+<body>
+
+
+    <div class="registration">
+        <!-- ======================login-Start========================= -->
+        <div class="login box">
+            <!-- ----------logo---------- -->
+            <div class="logo">
+                <a href="#"><span>h</span>ealix</a>
+            </div>
+            <!-- ----------login-with googl---------- -->
+            <a href="#" class="loginGoogle center">
+                <h4>Continue With Google</h4>
+                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" width="24"
+                    height="24">
+            </a>
+
+            <!-- ----------or-section---------- -->
+            <div class="or center">
+                <span></span>
+                <h3>or</h3>
+                <span></span>
+            </div>
+
+            <!-- --------------form--------------- -->
+            <form action="./index.html" method="get" class="formLogin center">
+                <div class="inputStyle">
+                    <input type="email" placeholder="Enter Your Email" name="email">
+                    <span class="error-message"></span>
+                </div>
+                <div class="inputStyle">
+                    <input class="passwordInput" type="password" placeholder="Enter Your password" password">
+                    <i class=" togglePassword fa fa-eye-slash"></i>
+                    <span class="error-message"></span>
+
+                </div>
+
+                <input class="submitAccount loginAccount" type="submit" value="log in">
+            </form>
+            <!-- ------------------------ -->
+            <div class="haveAccount">
+                <span>Don't have an account?</span>
+                <a href="" id="goToLogin">signup now</a>
+            </div>
+
+        </div>
+        <!-- ======================login-end========================= -->
+
+
+
+
+
+        <!-- ======================regiser-start========================= -->
+        <div class="regiser box ">
+
+            <!-- ----------logo---------- -->
+            <div class="logo">
+                <a href="#"><span>h</span>ealix</a>
+            </div>
+
+            <!-- ----------login-with googl---------- -->
+            <a href="#" class="loginGoogle center">
+                <h4>Create Account With Google</h4>
+                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" width="24"
+                    height="24">
+            </a>
+
+            <!-- ----------or-section---------- -->
+            <div class="or center">
+                <span></span>
+                <h3>or</h3>
+                <span></span>
+            </div>
+
+            <!-- --------------form--------------- -->
+            <form action="./index.html" method="get" class="formLogin center">
+                <div class="fullName">
+                    <div class="inputStyle">
+                        <input type="text" placeholder="Enter Your First Name" name="firstName">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="inputStyle">
+                        <input type="text" placeholder="Enter Your Last Name" name="lastName">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <div class="inputStyle">
+                    <input type="email" placeholder="Enter Your Email" name="email">
+                    <span class="error-message"></span>
+                </div>
+                <div class="inputStyle">
+                    <input class="passwordInput" type="password" placeholder="Enter Your password" name="password">
+                    <i class=" togglePassword fa fa-eye-slash"></i>
+                    <span class="error-message"></span>
+                </div>
+                <div class=" inputStyle">
+                    <input class="passwordInput" type="password" placeholder="confirm Password" name="confirmPassword">
+                    <i class=" togglePassword fa fa-eye-slash"></i>
+                    <span class="error-message"></span>
+                </div>
+                <input class="submitAccount CreateAccount" type="submit" value="Create Account">
+            </form>
+            <!-- --------------------------- -->
+            <div class="haveAccount">
+                <span>already have ane account?</span>
+                <a href="" id="goToRegister">login</a>
+            </div>
+
+        </div>
+        <!-- ======================regiser-end========================= -->
+
+
+
+
+
+
+
+        <div class="block"></div>
+        <div class="registerImage"></div>
+
+
+
+    </div>
+
+
+
+
+    <script src="./scripts/register.js"></script>
+
+</body>
+
+</html>
