@@ -179,6 +179,7 @@ fileInput.onchange = async function () {
             user.ProfileImg = uploadedImgURL.url;
             // console.log(user);
             profilePhoto.style.backgroundImage = `url('${user.ProfileImg}')`;
+            manageProfilePhoto.style.backgroundImage = `url('${user.ProfileImg}')`;
             localStorage.setItem("users", JSON.stringify(users));
         }
 
@@ -407,4 +408,5 @@ closeBannerPage.onclick = function () {
 }
 
 // ============================intro-banner-section-end============================
+
 
