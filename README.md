@@ -31,7 +31,5 @@ We also implemented **Dark Mode** and reusable code blocks to write the least am
 
 ---
 
-## 🚀 How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://abdullah-nasr10.github.io/Healix/
+## 🚀 Go Live
+   https://abdullah-nasr10.github.io/Healix/
